@@ -8,9 +8,13 @@ const book = {
 	author: "F. Scott Fitzgerald",
 	pages: 180,
 	isRead: false,
-    summary() {
-        return `${this.title} by ${this.author}, ${this.pages} pages. Read: ${this.isRead ? "The book has been read." : "The book hasn't been read yet."}`;
-    }
+	summary() {
+		return `${this.title} by ${this.author}, ${this.pages} pages. Read: ${
+			this.isRead
+				? "The book has been read."
+				: "The book hasn't been read yet."
+		}`;
+	},
 };
 
 console.log(book.summary());
