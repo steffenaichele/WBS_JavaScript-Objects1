@@ -8,32 +8,9 @@ const book = {
 	author: "F. Scott Fitzgerald",
 	pages: 180,
 	isRead: false,
+    summary() {
+        return `${this.title} by ${this.author}, ${this.pages} pages. Read: ${this.isRead ? "The book has been read." : "The book hasn't been read yet."}`;
+    }
 };
 
-const summary = () => {
-	console.log(
-		`%cTitle: ${book.title}`,
-		`color: grey; font-weight: light;`
-	);
-	console.log(
-		`%cAuthor: ${book.author}`,
-		`color: grey; font-weight: light;`
-	);
-	console.log(
-		`%cPages: ${book.pages}`,
-		`color: grey; font-weight: light;`
-	);
-	if (book.isRead === true) {
-		console.log(
-			`%cThis book has been read.`,
-			`color: green; font-weight: light;`
-		);
-	} else {
-		console.log(
-			`%cThis book has not been read yet.`,
-			`color: red; font-weight: light;`
-		);
-	}
-};
-
-summary();
+console.log(book.summary());
